@@ -1,6 +1,7 @@
 import "./App.css";
-import ExpenseItem from "./components/ExpenseItem";
-import Expenses from "./components/Expenses";
+import ExpenseItem from "./components/Expenses/ExpenseItem";
+import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 function App() {
   const expenses = [
@@ -25,9 +26,20 @@ function App() {
     },
   ];
 
+  const newExpenseHandler = (expense) => {
+    console.log("in app.js" + JSON.stringify(expense));
+  };
+
+  const selectYearHandler = (year) => {
+    console.log("in app.js");
+    console.log("year is" + year);
+  };
+
   return (
-    <div>
-      <Expenses expenses={expenses} />
+    <div className="App">
+      <h2>Let's try some coding...</h2>
+      <NewExpense onNewExpense={newExpenseHandler} />
+      <Expenses onSelectYear={selectYearHandler} expenses={expenses} />
     </div>
   );
 }

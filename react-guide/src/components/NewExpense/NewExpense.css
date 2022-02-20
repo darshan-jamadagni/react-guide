@@ -1,0 +1,42 @@
+.expense-container {
+  width: 600px;
+  border-radius: 10px;
+  background-color: rgb(184, 180, 238);
+}
+
+.row-1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.row-button {
+  display: flex;
+  justify-content: right;
+  padding: 10px;
+}
+
+.control {
+  font-weight: bold;
+  display: flex;
+  height: 50px;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.amount {
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.date {
+  align-items: flex-start;
+}
+
+.button {
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+}
